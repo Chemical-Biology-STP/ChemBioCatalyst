@@ -28,3 +28,6 @@
 [submodule "app_Query_Enamine_API"]
 	path = app_Query_Enamine_API
 	url = https://github.com/Chemical-Biology-STP/app_Query_Enamine_API
+[submodule "app_PMI_Calculator"]
+	path = app_PMI_Calculator
+	url = https://github.com/Chemical-Biology-STP/app_PMI_Calculator

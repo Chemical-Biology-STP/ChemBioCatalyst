@@ -71,5 +71,37 @@
                 "icon": ""
             }
         ]
+    },
+    {
+        "display": "Molecular Shape and Scaffold Analysis",
+        "folder": "molecular_shape_and_scaffold_analysis",
+        "pages": [
+            {
+                "display": "PMI Calculator",
+                "file_path": "molecular_shape_and_scaffold_analysis/pmi_calculator.py",
+                "icon": ""
+            },
+            {
+                "display": "Scaffold Graph",
+                "file_path": "molecular_shape_and_scaffold_analysis/scaffold_graph.py",
+                "icon": ""
+            }
+        ]
+    },
+    {
+        "display": "Protein and Peptide Analysis",
+        "folder": "protein_and_peptide_analysis",
+        "pages": [
+            {
+                "display": "ProtParam",
+                "file_path": "protein_and_peptide_analysis/protparam.py",
+                "icon": ""
+            },
+            {
+                "display": "Transpose Peptide Sequences",
+                "file_path": "protein_and_peptide_analysis/transpose_peptide_sequences.py",
+                "icon": ""
+            }
+        ]
     }
 ]
