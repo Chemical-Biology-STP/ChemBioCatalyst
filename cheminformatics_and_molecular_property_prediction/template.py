@@ -1,7 +1,7 @@
 import sys
 
-sys.path.append("app_Tanimoto_Similarity_Calculator")
+sys.path.append("app_SMILES_Explorer")
 
-from app_Tanimoto_Similarity_Calculator.main import main  # type: ignore
+from app_SMILES_Explorer.main import main  # type: ignore
 
 main()
