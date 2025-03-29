@@ -4,3 +4,6 @@
 [submodule "app_Explore_Chemical_Space"]
 	path = app_Explore_Chemical_Space
 	url = https://github.com/Chemical-Biology-STP/app_Explore_Chemical_Space
+[submodule "app_LLE_Calculator"]
+	path = app_LLE_Calculator
+	url = https://github.com/Chemical-Biology-STP/app_LLE_Calculator
