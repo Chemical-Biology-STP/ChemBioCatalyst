@@ -1,0 +1,75 @@
+[
+    {
+        "display": "Structure Prediction and Modelling",
+        "folder": "structure_prediction_and_modelling",
+        "pages": [
+            {
+                "display": "AlphaStream",
+                "file_path": "structure_prediction_and_modelling/alphastream.py",
+                "icon": ""
+            }
+        ]
+    },
+    {
+        "display": "Binding Site and Interaction Analysis",
+        "folder": "binding_site_and_interaction_analysis",
+        "pages": [
+            {
+                "display": "DeepCoSI",
+                "file_path": "binding_site_and_interaction_analysis/deepcosi.py",
+                "icon": ""
+            }
+        ]
+    },
+    {
+        "display": "Cheminformatics and Molecular Property Prediction",
+        "folder": "cheminformatics_and_molecular_property_prediction",
+        "pages": [
+            {
+                "display": "Explore Chemical Space",
+                "file_path": "cheminformatics_and_molecular_property_prediction/explore_chemical_space.py",
+                "icon": ""
+            },
+            {
+                "display": "LLE Calculator",
+                "file_path": "cheminformatics_and_molecular_property_prediction/lle_calculator.py",
+                "icon": ""
+            },
+            {
+                "display": "LogD Prediction",
+                "file_path": "cheminformatics_and_molecular_property_prediction/logd_prediction.py",
+                "icon": ""
+            },
+            {
+                "display": "LogP Calculation",
+                "file_path": "cheminformatics_and_molecular_property_prediction/logp_calculation.py",
+                "icon": ""
+            },
+            {
+                "display": "pKa Prediction",
+                "file_path": "cheminformatics_and_molecular_property_prediction/pka_prediction.py",
+                "icon": ""
+            },
+            {
+                "display": "Query Enamine API",
+                "file_path": "cheminformatics_and_molecular_property_prediction/query_enamine_api.py",
+                "icon": ""
+            },
+            {
+                "display": "SMILES Explorer",
+                "file_path": "cheminformatics_and_molecular_property_prediction/smiles_explorer.py",
+                "icon": ""
+            },
+            {
+                "display": "Tanimoto Similarity Calculator",
+                "file_path": "cheminformatics_and_molecular_property_prediction/tanimoto_similarity_calculator.py",
+                "icon": ""
+            },
+            {
+                "display": "Nearest Neighbours",
+                "file_path": "cheminformatics_and_molecular_property_prediction/nearest_neighbours.py",
+                "icon": ""
+            }
+        ]
+    }
+]
