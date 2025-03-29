@@ -1,7 +1,7 @@
 import sys
 
-sys.path.append("app_Nearest_Neighbours")
+sys.path.append("app_pKa_Predictor")
 
-from app_Nearest_Neighbours.main import main  # type: ignore
+from app_pKa_Predictor.main import main  # type: ignore
 
 main()

@@ -22,3 +22,6 @@
 [submodule "app_Nearest_Neighbours"]
 	path = app_Nearest_Neighbours
 	url = https://github.com/Chemical-Biology-STP/app_Nearest_Neighbours
+[submodule "app_pKa_Predictor"]
+	path = app_pKa_Predictor
+	url = https://github.com/Chemical-Biology-STP/app_pKa_Predictor
