@@ -19,3 +19,6 @@
 [submodule "app_logD_Predictor"]
 	path = app_logD_Predictor
 	url = https://github.com/Chemical-Biology-STP/app_logD_Predictor
+[submodule "app_Nearest_Neighbours"]
+	path = app_Nearest_Neighbours
+	url = https://github.com/Chemical-Biology-STP/app_Nearest_Neighbours

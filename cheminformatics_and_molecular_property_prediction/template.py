@@ -1,7 +1,7 @@
 import sys
 
-sys.path.append("app_logD_Predictor")
+sys.path.append("app_Nearest_Neighbours")
 
-from app_logD_Predictor.main import main  # type: ignore
+from app_Nearest_Neighbours.main import main  # type: ignore
 
 main()
