@@ -1,3 +1,6 @@
 [submodule "app_DeepCoSI/DeepCoSI"]
 	path = app_DeepCoSI/DeepCoSI
 	url = https://github.com/Chemical-Biology-STP/DeepCoSI
+[submodule "app_Explore_Chemical_Space"]
+	path = app_Explore_Chemical_Space
+	url = https://github.com/Chemical-Biology-STP/app_Explore_Chemical_Space
