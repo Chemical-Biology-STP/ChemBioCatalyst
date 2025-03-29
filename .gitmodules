@@ -37,3 +37,6 @@
 [submodule "app_ProtParam"]
 	path = app_ProtParam
 	url = https://github.com/Chemical-Biology-STP/app_ProtParam
+[submodule "app_Transpose_Peptide_Sequences"]
+	path = app_Transpose_Peptide_Sequences
+	url = https://github.com/Chemical-Biology-STP/app_Transpose_Peptide_Sequences
