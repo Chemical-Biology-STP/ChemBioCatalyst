@@ -34,3 +34,6 @@
 [submodule "app_Scaffold_Graph"]
 	path = app_Scaffold_Graph
 	url = https://github.com/Chemical-Biology-STP/app_Scaffold_Graph
+[submodule "app_ProtParam"]
+	path = app_ProtParam
+	url = https://github.com/Chemical-Biology-STP/app_ProtParam
