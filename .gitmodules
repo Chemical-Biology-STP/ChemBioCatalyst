@@ -16,3 +16,6 @@
 [submodule "app_logP_Calculator"]
 	path = app_logP_Calculator
 	url = https://github.com/Chemical-Biology-STP/app_logP_Calculator
+[submodule "app_logD_Predictor"]
+	path = app_logD_Predictor
+	url = https://github.com/Chemical-Biology-STP/app_logD_Predictor

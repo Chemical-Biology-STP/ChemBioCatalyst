@@ -1,7 +1,7 @@
 import sys
 
-sys.path.append("app_logP_Calculator")
+sys.path.append("app_logD_Predictor")
 
-from app_logP_Calculator.main import main  # type: ignore
+from app_logD_Predictor.main import main  # type: ignore
 
 main()
