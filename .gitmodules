@@ -7,3 +7,6 @@
 [submodule "app_LLE_Calculator"]
 	path = app_LLE_Calculator
 	url = https://github.com/Chemical-Biology-STP/app_LLE_Calculator
+[submodule "app_Tanimoto_Similarity_Calculator"]
+	path = app_Tanimoto_Similarity_Calculator
+	url = https://github.com/Chemical-Biology-STP/app_Tanimoto_Similarity_Calculator
