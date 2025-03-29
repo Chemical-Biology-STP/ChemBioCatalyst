@@ -25,3 +25,6 @@
 [submodule "app_pKa_Predictor"]
 	path = app_pKa_Predictor
 	url = https://github.com/Chemical-Biology-STP/app_pKa_Predictor
+[submodule "app_Query_Enamine_API"]
+	path = app_Query_Enamine_API
+	url = https://github.com/Chemical-Biology-STP/app_Query_Enamine_API
