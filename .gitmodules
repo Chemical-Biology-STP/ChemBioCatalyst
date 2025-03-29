@@ -31,3 +31,6 @@
 [submodule "app_PMI_Calculator"]
 	path = app_PMI_Calculator
 	url = https://github.com/Chemical-Biology-STP/app_PMI_Calculator
+[submodule "app_Scaffold_Graph"]
+	path = app_Scaffold_Graph
+	url = https://github.com/Chemical-Biology-STP/app_Scaffold_Graph
