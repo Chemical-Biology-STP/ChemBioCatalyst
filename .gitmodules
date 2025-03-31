@@ -1,0 +1,42 @@
+[submodule "app_DeepCoSI/DeepCoSI"]
+	path = app_DeepCoSI/DeepCoSI
+	url = https://github.com/Chemical-Biology-STP/DeepCoSI
+[submodule "app_Explore_Chemical_Space"]
+	path = app_Explore_Chemical_Space
+	url = https://github.com/Chemical-Biology-STP/app_Explore_Chemical_Space
+[submodule "app_LLE_Calculator"]
+	path = app_LLE_Calculator
+	url = https://github.com/Chemical-Biology-STP/app_LLE_Calculator
+[submodule "app_Tanimoto_Similarity_Calculator"]
+	path = app_Tanimoto_Similarity_Calculator
+	url = https://github.com/Chemical-Biology-STP/app_Tanimoto_Similarity_Calculator
+[submodule "app_SMILES_Explorer"]
+	path = app_SMILES_Explorer
+	url = https://github.com/Chemical-Biology-STP/app_SMILES_Explorer
+[submodule "app_logP_Calculator"]
+	path = app_logP_Calculator
+	url = https://github.com/Chemical-Biology-STP/app_logP_Calculator
+[submodule "app_logD_Predictor"]
+	path = app_logD_Predictor
+	url = https://github.com/Chemical-Biology-STP/app_logD_Predictor
+[submodule "app_Nearest_Neighbours"]
+	path = app_Nearest_Neighbours
+	url = https://github.com/Chemical-Biology-STP/app_Nearest_Neighbours
+[submodule "app_pKa_Predictor"]
+	path = app_pKa_Predictor
+	url = https://github.com/Chemical-Biology-STP/app_pKa_Predictor
+[submodule "app_Query_Enamine_API"]
+	path = app_Query_Enamine_API
+	url = https://github.com/Chemical-Biology-STP/app_Query_Enamine_API
+[submodule "app_PMI_Calculator"]
+	path = app_PMI_Calculator
+	url = https://github.com/Chemical-Biology-STP/app_PMI_Calculator
+[submodule "app_Scaffold_Graph"]
+	path = app_Scaffold_Graph
+	url = https://github.com/Chemical-Biology-STP/app_Scaffold_Graph
+[submodule "app_ProtParam"]
+	path = app_ProtParam
+	url = https://github.com/Chemical-Biology-STP/app_ProtParam
+[submodule "app_Transpose_Peptide_Sequences"]
+	path = app_Transpose_Peptide_Sequences
+	url = https://github.com/Chemical-Biology-STP/app_Transpose_Peptide_Sequences
