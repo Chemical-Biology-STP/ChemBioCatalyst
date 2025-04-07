@@ -40,3 +40,6 @@
 [submodule "app_Transpose_Peptide_Sequences"]
 	path = app_Transpose_Peptide_Sequences
 	url = https://github.com/Chemical-Biology-STP/app_Transpose_Peptide_Sequences
+[submodule "app_AlphaStream"]
+	path = app_AlphaStream
+	url = /home/yipy/GitHub/ChemBioCatalyst/app_AlphaStream
