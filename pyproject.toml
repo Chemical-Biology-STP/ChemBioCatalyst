@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools >= 78.1.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ChemBioCatalyst"
+version = "0.1.0"
+requires-python = ">=3.12"
+readme = { file = "README.md", content-type = "text/markdown" }
+dependencies = [
+    "Bio",
+    "chemplot",
+    # "chimera",
+    "dgl",
+    "dgllife",
+    "numpy",
+    "pandas",
+    "Pillow",
+    "plotly",
+    "prefetch_generator",
+    "python_bcrypt",
+    "rdkit",
+    "Requests",
+    "scikit_learn",
+    "scipy",
+    "streamlit",
+    "torch",
+    "torchani",
+    "xlsx2csv",
+]

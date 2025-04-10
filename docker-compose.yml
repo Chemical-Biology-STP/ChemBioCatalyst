@@ -1,0 +1,10 @@
+services:
+  streamlit:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8501:8501"
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+    command: ["streamlit", "run", "generated_app.py", "--server.port", "8501", "--server.headless", "true"]

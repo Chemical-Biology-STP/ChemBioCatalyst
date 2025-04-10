@@ -1,0 +1,97 @@
+name: Build and List Files - Github App Token Action
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+  pull_request:
+    branches:
+      - main
+      - dev
+
+
+env:
+  DEPLOYMENT_REPO: "k8s-cpad-ChemBioCatalys"
+
+
+jobs:
+  gitops-pipeline-build-image-and-commit:
+    runs-on: arc-runner-set-prod
+    steps:
+      - name: Checkout app sourcecode Repo
+        uses: actions/checkout@v4
+      
+      - name: Set ENV Variables
+        run: |
+          IMAGE_TAG=`echo ${{ github.ref_name }}-${{ github.sha }} | tr '[:upper:]' '[:lower:]'`
+          IMAGE_REF=`echo ${{ vars.CRICK_AZ_ACR_NAME }}.azurecr.io/${{ github.event.repository.name }}:${{ github.ref_name }}-${{ github.sha }} | tr '[:upper:]' '[:lower:]'`
+          IMAGE_REPO_NAME=`echo ${{ github.event.repository.name }} | tr '[:upper:]' '[:lower:]'`
+          echo "IMAGE_TAG=${IMAGE_TAG}" >> $GITHUB_ENV
+          echo "IMAGE_REF=${IMAGE_REF}" >> $GITHUB_ENV
+          echo "IMAGE_REPO_NAME=${IMAGE_REPO_NAME}" >> $GITHUB_ENV
+          
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to ACR
+        uses: docker/login-action@v3
+        with:
+            registry: ${{ vars.CRICK_AZ_ACR_NAME }}.azurecr.io
+            username: ${{ secrets.REGISTRY_USERNAME }}
+            password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          #context: .
+          push: true
+          tags: ${{ env.IMAGE_REF }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max      
+
+      - name: Scan Image with Trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+            image-ref: "${{ env.IMAGE_REF }}"
+            format: "table"
+            severity: "CRITICAL,HIGH"
+            exit-code: 0 # thi wil exit the pipeline - just for testing
+            ignore-unfixed: true
+            vuln-type: "os,library"
+      
+      
+      - name: Generate GitHub App Token
+        id: app-auth
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}    
+
+      - name: Checkout deployment Repo
+        uses: actions/checkout@v4
+        with:
+          repository: "FrancisCrickInstitute/${{ env.DEPLOYMENT_REPO }}"
+          ref: ${{ github.ref_name }}
+          token: ${{ steps.app-auth.outputs.token }}
+          path: ${{ env.DEPLOYMENT_REPO }}
+
+      - name: Update Kubernetes Deployment with New Image
+        run: |
+          #IMAGE_TAG=${{ github.ref_name }}-${{ github.sha }}
+          sed -i 's|image: .*|image: ${{ env.IMAGE_REF }}|' ${{ env.DEPLOYMENT_REPO }}/kubernetes/deployment.yaml
+  
+      - name: Commit and Push Changes
+        run: |
+          cd ${{ env.DEPLOYMENT_REPO }}
+          git config --global user.name 'crick-rancher-k8s-arc-runner'
+          git config --global user.email 'crick-rancher-k8s-arc-runner@crick.ac.uk'
+          git add kubernetes/deployment.yaml
+          git commit -m "Update deployment.yaml with new image tag ${{ github.ref_name }}-${{ github.sha }}"
+          git push origin ${{ github.ref_name }}
+        env:
+          GIT_COMMITTER_NAME: 'crick-rancher-k8s-arc-runner'
+          GIT_COMMITTER_EMAIL: 'crick-rancher-k8s-arc-runner@crick.ac.uk'
+          GITHUB_TOKEN: ${{ steps.app-auth.outputs.token }}
