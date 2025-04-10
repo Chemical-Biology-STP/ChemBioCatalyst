@@ -5,11 +5,13 @@ on:
     branches:
       - main
       - dev
+      - max
 
   pull_request:
     branches:
       - main
       - dev
+      - max
 
 
 env:
