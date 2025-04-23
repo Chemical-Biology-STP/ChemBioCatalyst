@@ -43,3 +43,6 @@
 [submodule "app_AlphaStream"]
 	path = app_AlphaStream
 	url = /home/yipy/GitHub/ChemBioCatalyst/app_AlphaStream
+[submodule "app_CovCysPredictor"]
+	path = app_CovCysPredictor
+	url = https://github.com/Chemical-Biology-STP/app_CovCysPredictor
